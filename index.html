@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бусы счастья — Видео мастер-класс по созданию авторских украшений и микромакраме</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            limestone: '#FAF7F2',
+            sagepowder: '#F0EFEB',
+            darkresin: '#1F1E1D',
+            warmgray: '#6E6A64',
+            terracotta: {
+              DEFAULT: '#C86D51',
+              hover: '#B2593F',
+              light: '#F8ECE8'
+            },
+            sage: {
+              DEFAULT: '#8F9988',
+              light: '#E6EAE4'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF7F2;
+      color: #1F1E1D;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-editorial {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    /* Subtle custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7F2;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D8D2C7;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C86D51;
+    }
+  </style>
+</head>
+<body class="selection:bg-terracotta selection:text-white antialiased">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-[#FAF7F2]/90 backdrop-blur-md border-b border-[#E8E2D8] transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex flex-col group">
+        <span class="font-editorial text-2xl sm:text-3xl tracking-[0.18em] font-bold text-darkresin uppercase group-hover:text-terracotta transition-colors">
+          Бусы счастья
+        </span>
+        <span class="text-[9px] tracking-[0.25em] text-warmgray uppercase -mt-1 font-medium">
+          Мастерская украшений
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-warmgray">
+        <a href="#about" class="hover:text-darkresin transition-colors">Кому подойдет</a>
+        <a href="#program" class="hover:text-darkresin transition-colors">Программа</a>
+        <a href="#course" class="hover:text-darkresin transition-colors">Мастер-класс</a>
+        <a href="#gallery" class="hover:text-darkresin transition-colors">Работы</a>
+        <a href="#reviews" class="hover:text-darkresin transition-colors">Отзывы</a>
+        <a href="#faq" class="hover:text-darkresin transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center">
+        <!-- Сюда можно вставить финальную ссылку на оплату -->
+        <a href="#course" class="px-5 py-2.5 rounded-full bg-darkresin text-limestone text-xs uppercase tracking-wider font-semibold hover:bg-terracotta transition-all shadow-sm hover:shadow-md">
+          Купить МК
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" aria-label="Открыть меню" class="md:hidden p-2 text-darkresin hover:text-terracotta focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="burgerIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-limestone border-b border-[#E8E2D8] px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col space-y-4 text-base font-medium text-darkresin">
+        <a href="#about" class="mobile-nav-link py-1 hover:text-terracotta">Кому подойдет</a>
+        <a href="#program" class="mobile-nav-link py-1 hover:text-terracotta">Программа</a>
+        <a href="#course" class="mobile-nav-link py-1 hover:text-terracotta">Мастер-класс</a>
+        <a href="#gallery" class="mobile-nav-link py-1 hover:text-terracotta">Работы учениц</a>
+        <a href="#reviews" class="mobile-nav-link py-1 hover:text-terracotta">Отзывы</a>
+        <a href="#faq" class="mobile-nav-link py-1 hover:text-terracotta">Вопросы и ответы</a>
+        <div class="pt-4 border-t border-[#E8E2D8]">
+          <!-- Ссылка на оплату для мобильного меню -->
+          <a href="#course" class="mobile-nav-link block text-center w-full py-3 rounded-full bg-terracotta text-white font-semibold">
+            Купить мастер-класс
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Text Column -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <h1 class="font-editorial text-4xl sm:text-5xl lg:text-6xl text-darkresin leading-[1.1] font-semibold tracking-tight">
+              Научитесь создавать украшения, которые хочется <span class="italic font-normal text-terracotta">трогать</span> и носить каждый день
+            </h1>
+
+            <p class="text-base sm:text-lg text-warmgray max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Практический видео мастер-класс в записи: микромакраме, сборка украшений из натуральных минералов и авторские узлы. Освойте 6 ювелирных техник за 3 часа без сложного оборудования в удобном для вас темпе.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+              <!-- Ссылка на страницу оплаты -->
+              <a href="https://example.com/payment" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-full bg-terracotta hover:bg-terracotta-hover text-white text-sm font-semibold tracking-wide uppercase transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 text-center">
+                Купить мастер-класс — 2 490 ₽
+              </a>
+              <a href="#gallery" class="w-full sm:w-auto px-7 py-4 rounded-full border border-darkresin/20 hover:border-darkresin text-darkresin text-sm font-semibold tracking-wide uppercase transition-all hover:bg-white/60 text-center">
+                Смотреть работы ↓
+              </a>
+            </div>
+
+            <!-- Micro-Proof Metrics -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-[#E8E2D8]/80 text-left">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-sage-light flex items-center justify-center text-sage shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                </div>
+                <div>
+                  <div class="font-bold text-darkresin text-sm">1,400+</div>
+                  <div class="text-xs text-warmgray leading-snug">выпускниц уже создали коллекции</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-terracotta-light flex items-center justify-center text-terracotta shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <div class="font-bold text-darkresin text-sm">Видео 4K</div>
+                  <div class="text-xs text-warmgray leading-snug">макро-ракурсы каждого движения</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-sagepowder flex items-center justify-center text-darkresin shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                  <div class="font-bold text-darkresin text-sm">Навсегда</div>
+                  <div class="text-xs text-warmgray leading-snug">бессрочный доступ к урокам</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Media / Visual Mockup -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <div class="absolute -top-4 -left-4 w-full h-full rounded-2xl border-2 border-sage/30 translate-x-3 translate-y-3 pointer-events-none"></div>
+              
+              <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-white border border-[#E8E2D8]">
+                <!-- SVG Artistic Mockup -->
+                <svg viewBox="0 0 600 700" class="w-full h-auto object-cover bg-[#EAE5DC]" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="gradCraft" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#FAF5EE"/>
+                      <stop offset="50%" stop-color="#E7DFD4"/>
+                      <stop offset="100%" stop-color="#D7CDC0"/>
+                    </linearGradient>
+                    <radialGradient id="stoneGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#6F8B88"/>
+                      <stop offset="80%" stop-color="#3F5250"/>
+                      <stop offset="100%" stop-color="#24312F"/>
+                    </radialGradient>
+                  </defs>
+
+                  <rect width="600" height="700" fill="url(#gradCraft)"/>
+
+                  <circle cx="300" cy="350" r="220" fill="none" stroke="#D3C9BD" stroke-width="1.5" stroke-dasharray="6,6"/>
+                  <circle cx="300" cy="350" r="160" fill="#F4EFEA" opacity="0.6"/>
+
+                  <path d="M120 480 Q 250 250 480 320" fill="none" stroke="#C86D51" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M140 500 Q 260 270 500 330" fill="none" stroke="#1F1E1D" stroke-width="3" stroke-linecap="round" stroke-dasharray="4,4"/>
+                  
+                  <g transform="translate(320, 310)">
+                    <polygon points="0,-45 40,-15 30,35 -25,45 -45,5" fill="url(#stoneGlow)" stroke="#C86D51" stroke-width="2"/>
+                    <path d="M-15,-20 L20,15" stroke="#90DDD5" stroke-width="2" opacity="0.7"/>
+                    <path d="M0,-30 L25,-5" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8"/>
+                  </g>
+
+                  <circle cx="240" cy="340" r="10" fill="#E2B158" stroke="#AA8237" stroke-width="1"/>
+                  <circle cx="215" cy="365" r="8" fill="#E2B158" stroke="#AA8237" stroke-width="1"/>
+                  <circle cx="410" cy="320" r="9" fill="#E2B158" stroke="#AA8237" stroke-width="1"/>
+                  <circle cx="435" cy="335" r="7" fill="#E2B158" stroke="#AA8237" stroke-width="1"/>
+
+                  <rect x="40" y="560" width="520" height="95" rx="12" fill="#FAF7F2" fill-opacity="0.95" stroke="#DCD6CA" stroke-width="1"/>
+                  <text x="70" y="600" font-family="'Cormorant Garamond', serif" font-size="22" font-weight="bold" fill="#1F1E1D">Бусы счастья • Видеокурс в записи</text>
+                  <text x="70" y="628" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#6E6A64">Ручная сборка: натуральный лабрадорит, шнур Linhasita (Бразилия)</text>
+                </svg>
+
+                <div class="p-4 bg-white flex items-center justify-between border-t border-[#E8E2D8]">
+                  <span class="text-xs uppercase tracking-wider text-warmgray font-semibold">Урок 03 • Оплетение кабошона</span>
+                  <span class="text-xs font-semibold text-terracotta bg-terracotta-light px-2.5 py-1 rounded-full">HD 4K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: PAIN & DESIRE (КОМУ ПОДОЙДЕТ) -->
+    <section id="about" class="py-20 bg-white border-y border-[#E8E2D8]">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span class="text-xs uppercase tracking-[0.2em] font-semibold text-terracotta">Для кого мастер-класс</span>
+          <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-semibold text-darkresin">
+            Для тех, кто устал от экранов и хочет создавать красоту своими руками
+          </h2>
+          <p class="text-warmgray text-sm sm:text-base">
+            Три часа спокойного погружения в тактильный мир камней и шелковистых шнуров заменяют неделю медитаций.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Card 1 -->
+          <div class="p-8 rounded-2xl bg-limestone border border-[#E8E2D8] hover:border-terracotta/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-terracotta-light text-terracotta flex items-center justify-center font-editorial text-2xl font-bold">
+                01
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-darkresin">Перезагрузка и арт-терапия</h3>
+              <p class="text-warmgray text-sm leading-relaxed">
+                Переключите голову после рабочей рутины и бесконечных созвонов. Монотонное завязывание узелков стабилизирует дыхание и возвращает контакт со своим телом.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#E8E2D8]/60 text-xs font-semibold text-terracotta flex items-center gap-1">
+              Тактильный детокс от гаджетов →
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="p-8 rounded-2xl bg-limestone border border-[#E8E2D8] hover:border-terracotta/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-sage-light text-sage flex items-center justify-center font-editorial text-2xl font-bold">
+                02
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-darkresin">Стильный гардероб своими руками</h3>
+              <p class="text-warmgray text-sm leading-relaxed">
+                Забудьте о типовых вещах из масс-маркета. Вы научитесь подбирать минералы под оттенки одежды и создавать браслеты, которые идеально сидят на вашем запястье.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#E8E2D8]/60 text-xs font-semibold text-sage flex items-center gap-1">
+              Эксклюзивные украшения в 4 раза дешевле брендовых →
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="p-8 rounded-2xl bg-limestone border border-[#E8E2D8] hover:border-terracotta/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-[#EDEAE2] text-darkresin flex items-center justify-center font-editorial text-2xl font-bold">
+                03
+              </div>
+              <h3 class="font-editorial text-2xl font-semibold text-darkresin">Старт авторского бренда</h3>
+              <p class="text-warmgray text-sm leading-relaxed">
+                Освойте коммерчески востребованные техники. Мы дадим закрытые базы оптовых поставщиков фурнитуры 18K и покажем, как упаковывать изделия для продаж от 3 500 ₽ за сет.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#E8E2D8]/60 text-xs font-semibold text-darkresin flex items-center gap-1">
+              Готовая база поставщиков и ценообразование →
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: PROGRAM (ЧЕМУ НАУЧИТЕСЬ) -->
+    <section id="program" class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div class="max-w-xl">
+            <span class="text-xs uppercase tracking-[0.2em] font-semibold text-terracotta">Методология обучения</span>
+            <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-semibold text-darkresin mt-2">
+              От первого узелка до авторской коллекции
+            </h2>
+          </div>
+          <p class="text-warmgray text-sm max-w-sm">
+            Каждый шаг сопровождается макро-видео в 4K с ракурсом «от первого лица», чтобы вы видели каждое движение пальцев.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Module 1 -->
+          <div class="bg-white p-7 rounded-2xl border border-[#E8E2D8] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="text-terracotta font-editorial text-4xl font-bold mb-4">01</div>
+              <h3 class="font-bold text-darkresin text-lg mb-2">Минералы и колористика</h3>
+              <p class="text-warmgray text-xs leading-relaxed">
+                Разновидности камней, свойства минералов, совместимость палитр. Подбор вощёных шнуров Linhasita (Бразилия) и стойкой позолоченной фурнитуры.
+              </p>
+            </div>
+            <div class="mt-6 text-[11px] font-semibold tracking-wider uppercase text-warmgray bg-sagepowder px-3 py-1.5 rounded-lg w-max">
+              Теория + Практика
+            </div>
+          </div>
+
+          <!-- Module 2 -->
+          <div class="bg-white p-7 rounded-2xl border border-[#E8E2D8] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="text-terracotta font-editorial text-4xl font-bold mb-4">02</div>
+              <h3 class="font-bold text-darkresin text-lg mb-2">Техники узлов и замков</h3>
+              <p class="text-warmgray text-xs leading-relaxed">
+                Постановка рук: базовый плоский узел, репсовый узел, скользящий регулируемый замок «шамбала». Чистое запаивание кончиков без тёмной копоти.
+              </p>
+            </div>
+            <div class="mt-6 text-[11px] font-semibold tracking-wider uppercase text-warmgray bg-sagepowder px-3 py-1.5 rounded-lg w-max">
+              Базовые навыки
+            </div>
+          </div>
+
+          <!-- Module 3 -->
+          <div class="bg-white p-7 rounded-2xl border border-[#E8E2D8] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="text-terracotta font-editorial text-4xl font-bold mb-4">03</div>
+              <h3 class="font-bold text-darkresin text-lg mb-2">Оплетение и закрепка</h3>
+              <p class="text-warmgray text-xs leading-relaxed">
+                Интеграция кабошонов без сверления, расчёт натяжения нитей под точный охват кисти, вплетение японского бисера Miyuki Delica.
+              </p>
+            </div>
+            <div class="mt-6 text-[11px] font-semibold tracking-wider uppercase text-warmgray bg-sagepowder px-3 py-1.5 rounded-lg w-max">
+              Сложные сборки
+            </div>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="bg-white p-7 rounded-2xl border border-[#E8E2D8] shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="text-terracotta font-editorial text-4xl font-bold mb-4">04</div>
+              <h3 class="font-bold text-darkresin text-lg mb-2">Презентация и упаковка</h3>
+              <p class="text-warmgray text-xs leading-relaxed">
+                Крафтовая премиум-упаковка, правила ухода за украшениями, эстетичная предметная съёмка на смартфон при естественном свете.
+              </p>
+            </div>
+            <div class="mt-6 text-[11px] font-semibold tracking-wider uppercase text-warmgray bg-sagepowder px-3 py-1.5 rounded-lg w-max">
+              Финал курса
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: SINGLE PRODUCT OFFER (МАСТЕР-КЛАСС В ЗАПИСИ) -->
+    <section id="course" class="py-20 bg-white border-y border-[#E8E2D8]">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+          <span class="text-xs uppercase tracking-[0.2em] font-semibold text-terracotta">Формат обучения</span>
+          <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-semibold text-darkresin">
+            Полный мастер-класс в записи
+          </h2>
+          <p class="text-warmgray text-sm sm:text-base">
+            Занимайтесь в любое удобное время, ставьте на паузу, пересматривайте сложные моменты без ограничений и дедлайнов.
+          </p>
+        </div>
+
+        <!-- Highlighted Single Offer Card -->
+        <div class="relative rounded-3xl p-8 sm:p-12 bg-limestone border-2 border-terracotta/80 shadow-xl overflow-hidden">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-terracotta-light text-terracotta text-xs font-semibold tracking-wide uppercase">
+                Мгновенный доступ после оплаты
+              </div>
+
+              <h3 class="font-editorial text-3xl sm:text-4xl font-bold text-darkresin">
+                Видеокурс «Авторские украшения & микромакраме»
+              </h3>
+
+              <p class="text-sm text-warmgray leading-relaxed">
+                Пошаговая программа от первого простого узелка до самостоятельного создания браслетов, чокеров и работы с натуральными минералами. Все ссылки на поставщиков уже внутри.
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-darkresin">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-terracotta font-bold text-sm">✓</span> 8 подробных видеоуроков в 4K
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span class="text-terracotta font-bold text-sm">✓</span> База проверенных поставщиков
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span class="text-terracotta font-bold text-sm">✓</span> PDF-конспекты и схемы узлов
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span class="text-terracotta font-bold text-sm">✓</span> Доступ к записям навсегда
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span class="text-terracotta font-bold text-sm">✓</span> Просмотр с телефона или ПК
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span class="text-terracotta font-bold text-sm">✓</span> Чат выпускниц и поддержка
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 bg-white rounded-2xl border border-[#E8E2D8] text-center space-y-6">
+              <div>
+                <span class="text-xs uppercase tracking-wider text-warmgray font-semibold">Стоимость мастер-класса</span>
+                <div class="flex items-baseline justify-center gap-3 mt-2">
+                  <span class="text-4xl sm:text-5xl font-bold text-darkresin font-editorial">2 490 ₽</span>
+                  <span class="text-base text-warmgray line-through">3 500 ₽</span>
+                </div>
+                <p class="text-[11px] text-warmgray mt-1">Единоразовый платеж, никаких скрытых подписок</p>
+              </div>
+
+              <!-- Прямая кнопка-ссылка на страницу оплаты -->
+              <a href="https://example.com/payment" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-full bg-terracotta hover:bg-terracotta-hover text-white font-semibold text-xs tracking-wider uppercase transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 text-center block">
+                Перейти к оплате курса
+              </a>
+
+              <div class="flex items-center justify-center gap-2 text-[11px] text-warmgray">
+                <svg class="w-4 h-4 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                <span>Безопасная оплата картой любого банка РФ</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: GALLERY (РАБОТЫ УЧЕНИКОВ) -->
+    <section id="gallery" class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+          <span class="text-xs uppercase tracking-[0.2em] font-semibold text-terracotta">Галерея выпускниц</span>
+          <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-semibold text-darkresin">
+            Сделано руками наших учениц
+          </h2>
+          <p class="text-warmgray text-sm">
+            Эти украшения были созданы девушками, которые до мастер-класса ни разу не держали в руках ювелирный шнур.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-12">
+          <button onclick="filterGallery('all')" class="filter-btn active px-5 py-2 rounded-full text-xs font-semibold border transition-all bg-darkresin text-white border-darkresin" data-category="all">Все работы</button>
+          <button onclick="filterGallery('bracelets')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold border transition-all bg-white text-darkresin border-[#E8E2D8] hover:border-darkresin" data-category="bracelets">Браслеты</button>
+          <button onclick="filterGallery('chokers')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold border transition-all bg-white text-darkresin border-[#E8E2D8] hover:border-darkresin" data-category="chokers">Чокеры</button>
+          <button onclick="filterGallery('sets')" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold border transition-all bg-white text-darkresin border-[#E8E2D8] hover:border-darkresin" data-category="sets">Сеты украшений</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Item 1 -->
+          <div class="gallery-item group rounded-2xl overflow-hidden bg-white border border-[#E8E2D8] transition-all hover:shadow-lg" data-type="bracelets">
+            <div class="aspect-square bg-[#ECE7DE] relative overflow-hidden flex items-center justify-center">
+              <img 
+                src="https://i.postimg.cc/9f0LsHGt/images.jpg" 
+                alt="Микромакраме — сет Северное сияние" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x600/FAF7F2/C86D51?text=Микромакраме';"
+              />
+              <span class="absolute bottom-3 left-4 text-[11px] font-medium tracking-wide uppercase text-darkresin/90 bg-white/90 backdrop-blur px-2.5 py-1 rounded shadow-sm">Микромакраме</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-bold text-darkresin text-sm">Сет «Северное сияние»</h4>
+              <p class="text-xs text-warmgray mt-1">Лабрадорит, вощеный шнур Linhasita. Работа Анны (Москва, 1-й день)</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="gallery-item group rounded-2xl overflow-hidden bg-white border border-[#E8E2D8] transition-all hover:shadow-lg" data-type="bracelets">
+            <div class="aspect-square bg-[#E8E3D7] relative overflow-hidden flex items-center justify-center p-8">
+              <svg viewBox="0 0 300 300" class="w-full h-full text-warmgray/40 group-hover:scale-105 transition-transform duration-500">
+                <path d="M50 150 Q 150 70 250 150 Q 150 230 50 150" fill="none" stroke="#1F1E1D" stroke-width="3"/>
+                <circle cx="120" cy="140" r="16" fill="#A88B7D"/>
+                <circle cx="180" cy="160" r="14" fill="#8F9988"/>
+              </svg>
+              <span class="absolute bottom-3 left-4 text-[11px] font-medium tracking-wide uppercase text-darkresin/70 bg-white/80 backdrop-blur px-2 py-0.5 rounded">Натуральные камни</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-bold text-darkresin text-sm">Браслет-талисман «Земля и песок»</h4>
+              <p class="text-xs text-warmgray mt-1">Турмалин, яшма, серебро 925. Работа Ольги (Санкт-Петербург)</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="gallery-item group rounded-2xl overflow-hidden bg-white border border-[#E8E2D8] transition-all hover:shadow-lg" data-type="chokers">
+            <div class="aspect-square bg-[#F1EFEA] relative overflow-hidden flex items-center justify-center p-8">
+              <svg viewBox="0 0 300 300" class="w-full h-full text-warmgray/40 group-hover:scale-105 transition-transform duration-500">
+                <ellipse cx="150" cy="150" rx="110" ry="80" fill="none" stroke="#C86D51" stroke-width="3"/>
+                <circle cx="150" cy="230" r="18" fill="#5F7D88"/>
+              </svg>
+              <span class="absolute bottom-3 left-4 text-[11px] font-medium tracking-wide uppercase text-darkresin/70 bg-white/80 backdrop-blur px-2 py-0.5 rounded">Чокер</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-bold text-darkresin text-sm">Чокер с каплей аквамарина</h4>
+              <p class="text-xs text-warmgray mt-1">Японский бисер Miyuki, аквамарин. Работа Марии (Казань)</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="gallery-item group rounded-2xl overflow-hidden bg-white border border-[#E8E2D8] transition-all hover:shadow-lg" data-type="sets">
+            <div class="aspect-square bg-[#E5DFD3] relative overflow-hidden flex items-center justify-center p-8">
+              <svg viewBox="0 0 300 300" class="w-full h-full text-warmgray/40 group-hover:scale-105 transition-transform duration-500">
+                <circle cx="120" cy="130" r="60" fill="none" stroke="#8F9988" stroke-width="3"/>
+                <circle cx="180" cy="170" r="60" fill="none" stroke="#C86D51" stroke-width="3"/>
+              </svg>
+              <span class="absolute bottom-3 left-4 text-[11px] font-medium tracking-wide uppercase text-darkresin/70 bg-white/80 backdrop-blur px-2 py-0.5 rounded">Сет из 3 изделий</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-bold text-darkresin text-sm">Сет «Warm Bronze»</h4>
+              <p class="text-xs text-warmgray mt-1">Бронзит, пирит, скользящие замки шамбала. Работа Дарьи (Екатеринбург)</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="gallery-item group rounded-2xl overflow-hidden bg-white border border-[#E8E2D8] transition-all hover:shadow-lg" data-type="bracelets">
+            <div class="aspect-square bg-[#EEE9E0] relative overflow-hidden flex items-center justify-center p-8">
+              <svg viewBox="0 0 300 300" class="w-full h-full text-warmgray/40 group-hover:scale-105 transition-transform duration-500">
+                <circle cx="150" cy="150" r="90" fill="none" stroke="#1F1E1D" stroke-width="2"/>
+                <circle cx="150" cy="60" r="8" fill="#E2B158"/>
+                <circle cx="180" cy="70" r="8" fill="#E2B158"/>
+                <circle cx="120" cy="70" r="8" fill="#E2B158"/>
+              </svg>
+              <span class="absolute bottom-3 left-4 text-[11px] font-medium tracking-wide uppercase text-darkresin/70 bg-white/80 backdrop-blur px-2 py-0.5 rounded">Браслет</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-bold text-darkresin text-sm">Браслет «Desert Dune»</h4>
+              <p class="text-xs text-warmgray mt-1">Солнечный камень, золотое напыление. Работа Екатерины (Новосибирск)</p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="gallery-item group rounded-2xl overflow-hidden bg-white border border-[#E8E2D8] transition-all hover:shadow-lg" data-type="sets">
+            <div class="aspect-square bg-[#E9E4DC] relative overflow-hidden flex items-center justify-center p-8">
+              <svg viewBox="0 0 300 300" class="w-full h-full text-warmgray/40 group-hover:scale-105 transition-transform duration-500">
+                <rect x="75" y="75" width="150" height="150" rx="20" fill="none" stroke="#C86D51" stroke-width="2"/>
+                <circle cx="150" cy="150" r="25" fill="#C86D51" opacity="0.8"/>
+              </svg>
+              <span class="absolute bottom-3 left-4 text-[11px] font-medium tracking-wide uppercase text-darkresin/70 bg-white/80 backdrop-blur px-2 py-0.5 rounded">Комплект</span>
+            </div>
+            <div class="p-5">
+              <h4 class="font-bold text-darkresin text-sm">Сет «Этника & Минимализм»</h4>
+              <p class="text-xs text-warmgray mt-1">Сердолик, репсовые узлы, фурнитура 18K. Работа Натальи (Москва)</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: REVIEWS (ОТЗЫВЫ) -->
+    <section id="reviews" class="py-20 bg-white border-y border-[#E8E2D8]">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        
+        <div class="text-center max-w-xl mx-auto mb-16 space-y-3">
+          <span class="text-xs uppercase tracking-[0.2em] font-semibold text-terracotta">Честные впечатления</span>
+          <h2 class="font-editorial text-3xl sm:text-4xl font-semibold text-darkresin">
+            Истории тех, кто уже создал свои первые изделия
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Review 1 -->
+          <div class="p-7 rounded-2xl bg-limestone border border-[#E8E2D8] flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex text-amber-500 text-sm">★★★★★</div>
+              <p class="text-darkresin text-sm leading-relaxed italic">
+                «Впервые за полгода отключила уведомления в Slack на 3 часа. Это невероятно медитативный процесс! За вечер собрала браслет с лабрадоритом, теперь ношу на работу каждый день, коллеги уже просят сделать им на заказ.»
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#E8E2D8]/80 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-terracotta text-white font-bold flex items-center justify-center text-xs">МС</div>
+              <div>
+                <div class="font-bold text-darkresin text-xs">Мария Смирнова</div>
+                <div class="text-[11px] text-warmgray">UX-дизайнер, Москва</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="p-7 rounded-2xl bg-limestone border border-[#E8E2D8] flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex text-amber-500 text-sm">★★★★★</div>
+              <p class="text-darkresin text-sm leading-relaxed italic">
+                «Брала тариф с Craft Box. Коробка приехала как подарок из дорогого бутика: каждый минерал подписан, шнуры пахнут воском, всё разложено по отделениям. Уроки понятны даже ребенку, ни один узелок не переделывала.»
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#E8E2D8]/80 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-sage text-white font-bold flex items-center justify-center text-xs">ЕВ</div>
+              <div>
+                <div class="font-bold text-darkresin text-xs">Елена Васильева</div>
+                <div class="text-[11px] text-warmgray">Юрист, Санкт-Петербург</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="p-7 rounded-2xl bg-limestone border border-[#E8E2D8] flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex text-amber-500 text-sm">★★★★★</div>
+              <p class="text-darkresin text-sm leading-relaxed italic">
+                «Была на живом мастер-классе в студии. Атмосфера невероятная — бокал просекко, аромасвечи, камерная группа девочек. За 4 часа собрала 3 украшения, которые в магазинах стоят минимум по 4 тысячи рублей каждое!»
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-[#E8E2D8]/80 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-darkresin text-white font-bold flex items-center justify-center text-xs">АП</div>
+              <div>
+                <div class="font-bold text-darkresin text-xs">Анна Полякова</div>
+                <div class="text-[11px] text-warmgray">Фотограф, Москва</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: FAQ (АККОРДЕОН) -->
+    <section id="faq" class="py-20 lg:py-28">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        
+        <div class="text-center mb-16 space-y-3">
+          <span class="text-xs uppercase tracking-[0.2em] font-semibold text-terracotta">Частые вопросы</span>
+          <h2 class="font-editorial text-3xl sm:text-4xl font-semibold text-darkresin">
+            Все детали мастер-класса
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- Accordion Item 1 -->
+          <div class="faq-item border border-[#E8E2D8] rounded-2xl bg-white overflow-hidden transition-all">
+            <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-semibold text-darkresin text-base focus:outline-none">
+              <span>Нужен ли опыт в рукоделии?</span>
+              <span class="faq-icon text-xl text-terracotta transition-transform duration-300 font-light">+</span>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-sm text-warmgray">
+              <div class="pb-6 leading-relaxed">
+                Нет, абсолютно не нужен. Программа построена по принципу плавного усложнения: от постановки пальцев и простого завязывания первого шнурка до фиксации кабошонов. 90% наших учениц никогда ранее не плели браслеты.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="faq-item border border-[#E8E2D8] rounded-2xl bg-white overflow-hidden transition-all">
+            <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-semibold text-darkresin text-base focus:outline-none">
+              <span>Что делать, если у меня не получится узел?</span>
+              <span class="faq-icon text-xl text-terracotta transition-transform duration-300 font-light">+</span>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-sm text-warmgray">
+              <div class="pb-6 leading-relaxed">
+                Все ключевые узлы сняты в замедленной съемке с нескольких ракурсов с комментариями мастера. Кроме того, в закрытом чате вы можете отправить короткое видео своей работы, и куратор подскажет, какую именно нить подтянуть.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="faq-item border border-[#E8E2D8] rounded-2xl bg-white overflow-hidden transition-all">
+            <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-semibold text-darkresin text-base focus:outline-none">
+              <span>Как быстро отправляется и доходит Craft Box?</span>
+              <span class="faq-icon text-xl text-terracotta transition-transform duration-300 font-light">+</span>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-sm text-warmgray">
+              <div class="pb-6 leading-relaxed">
+                Мы отправляем боксы курьерской службой СДЭК в течение 24 часов после оплаты. Доставка по Москве и Санкт-Петербургу занимает 1–2 дня, по остальной территории России — в среднем 3–5 дней. Доступ к видеоурокам открывается моментально.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 4 -->
+          <div class="faq-item border border-[#E8E2D8] rounded-2xl bg-white overflow-hidden transition-all">
+            <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 font-semibold text-darkresin text-base focus:outline-none">
+              <span>На сколько по времени сохраняется доступ к урокам?</span>
+              <span class="faq-icon text-xl text-terracotta transition-transform duration-300 font-light">+</span>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-sm text-warmgray">
+              <div class="pb-6 leading-relaxed">
+                Доступ к видеоматериалам, пошаговым PDF-инструкциям и обновлениям базы поставщиков предоставляется навсегда. Вы сможете пересматривать уроки в удобном для себя ритме без дедлайнов и спешки.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-darkresin text-[#FAF7F2] py-14 border-t border-darkresin">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-2 space-y-4">
+          <span class="font-editorial text-2xl tracking-[0.18em] uppercase font-bold text-limestone block">
+            Бусы счастья
+          </span>
+          <p class="text-xs text-warmgray max-w-sm leading-relaxed">
+            Мастерская авторских украшений и школа ювелирного плетения. Обучаем создавать изделия из минералов и микромакраме в записи с бессрочным доступом.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div class="space-y-3">
+          <div class="text-xs font-semibold uppercase tracking-wider text-limestone">Навигация</div>
+          <ul class="space-y-2 text-xs text-warmgray">
+            <li><a href="#about" class="hover:text-white transition-colors">Кому подойдет</a></li>
+            <li><a href="#program" class="hover:text-white transition-colors">Программа обучения</a></li>
+            <li><a href="#course" class="hover:text-white transition-colors">Мастер-класс</a></li>
+            <li><a href="#gallery" class="hover:text-white transition-colors">Работы учениц</a></li>
+          </ul>
+        </div>
+
+        <!-- Socials & Contacts -->
+        <div class="space-y-3">
+          <div class="text-xs font-semibold uppercase tracking-wider text-limestone">Связь</div>
+          <ul class="space-y-2 text-xs text-warmgray">
+            <li><a href="https://t.me" target="_blank" rel="noopener noreferrer" class="hover:text-terracotta transition-colors flex items-center gap-1.5">Telegram мастерской ↗</a></li>
+            <li><a href="mailto:hello@happypearls.ru" class="hover:text-white transition-colors">hello@happypearls.ru</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-warmgray gap-4">
+        <div>© 2026 Бусы счастья. Все права защищены.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors">Политика конфиденциальности</a>
+          <a href="#" class="hover:text-white transition-colors">Договор оферты</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // 2. FAQ Accordion Logic
+    const faqButtons = document.querySelectorAll('.faq-btn');
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+        // Close other items
+        document.querySelectorAll('.faq-answer').forEach(el => el.style.maxHeight = '0px');
+        document.querySelectorAll('.faq-icon').forEach(el => {
+          el.textContent = '+';
+          el.style.transform = 'rotate(0deg)';
+        });
+
+        if (!isOpen) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.textContent = '−';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // 3. Gallery Filtering
+    function filterGallery(category) {
+      const items = document.querySelectorAll('.gallery-item');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      // Update button styles
+      buttons.forEach(btn => {
+        if (btn.dataset.category === category) {
+          btn.classList.add('bg-darkresin', 'text-white', 'border-darkresin');
+          btn.classList.remove('bg-white', 'text-darkresin');
+        } else {
+          btn.classList.remove('bg-darkresin', 'text-white', 'border-darkresin');
+          btn.classList.add('bg-white', 'text-darkresin');
+        }
+      });
+
+      // Filter gallery cards
+      items.forEach(item => {
+        if (category === 'all' || item.dataset.type === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
